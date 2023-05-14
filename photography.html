@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title> KMeens </title>
+        <link rel="icon" type="image/png" href="images/logo-white-on-transparent.png"/>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+    <body>
+        <section class="sub-header">
+            <nav>
+                <a href="index.html"><img src="images/logo-white.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-regular fa-circle-xmark" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="photography.html">PHOTOGRAPHY</a></li>
+                        <li><a href="contact.html">CONTACT ME</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()" id="menuBar"></i>
+            </nav>
+            <h1> Photography </h1>
+        </section>
+        <div class="full-img" id="fullImgBox">
+            <img src="photography/padmanabha_temple1.jpg" id="fullImg">
+            <span onclick="closeFullImg()">X</span>
+        </div>
+
+        <div class="gallery">
+            <!-- Add new images here -->
+            <p><img src="photography/spring_yellow_flowers1.png" onclick="openFullImg(this.src)"> <br> Spring is here! #Spring2023</p>
+            <p><img src="photography/evening_sky4.png" onclick="openFullImg(this.src)"> <br> Soaking in the sun </p>
+            <p><img src="photography/evening_sky3.png" onclick="openFullImg(this.src)"> <br> When the sun got stuck in the branches!</p>
+            <p><img src="photography/evening_sky2.png" onclick="openFullImg(this.src)"> <br> Spring is right around the corner :)</p>
+            <p><img src="photography/bird_on_the_rail.png" onclick="openFullImg(this.src)"> <br> The wait. </p>
+            <p><img src="photography/sky_on_flame1.png" onclick="openFullImg(this.src)"> <br> Flames. </p>
+            <p><img src="photography/eat_rainbow.png" onclick="openFullImg(this.src)"> <br> Eat the rainbow.</p>
+            <p><img src="photography/cn_tower1.png" onclick="openFullImg(this.src)"> <br> Reflections.</p>
+            <p><img src="photography/iced_coffee_tims.png" onclick="openFullImg(this.src)"> <br> Chilled. </p>
+            <p><img src="photography/snow_kid.png" onclick="openFullImg(this.src)"> <br> My very own snow kid ^_^ </p>
+            <p><img src="photography/snow_angel.png" onclick="openFullImg(this.src)"> <br> One down in the bucket list </p>
+            <p><img src="photography/snow_garden.png" onclick="openFullImg(this.src)"> <br> Snow garden #Winter2022</p>
+            <p><img src="photography/read_in_the_train.png" onclick="openFullImg(this.src)"> <br> Book, snow, journey.</p>
+            <p><img src="photography/woods_night.png" onclick="openFullImg(this.src)"> <br> The woods - creepy yet consoling.</p>
+            <p><img src="photography/night_woods1.png" onclick="openFullImg(this.src)"> <br> Nowhere to hide </p>
+            <p><img src="photography/morning_fog_woods.png" onclick="openFullImg(this.src)"> <br> The last of Fall </p>
+            <p><img src="photography/kempenfelt2.png" onclick="openFullImg(this.src)"> <br> Windowed by the leaves </p>
+            <p><img src="photography/golden_leaves.png" onclick="openFullImg(this.src)"> <br> Growing gold</p>
+            <p><img src="photography/fall_colors2.png" onclick="openFullImg(this.src)"> <br> Can't get enough of these colors!</p>
+            <p><img src="photography/fall_colors1.png" onclick="openFullImg(this.src)"> <br> Let go! </p>
+            <p><img src="photography/fall_red_leaf2.png" onclick="openFullImg(this.src)"> <br> Fall 2022</p>
+            <p><img src="photography/fall_red_leaf1.png" onclick="openFullImg(this.src)"> <br> The Fall! #Fall2022</p>
+            <p><img src="photography/cn_tower2.png" onclick="openFullImg(this.src)"> <br> From the other side</p>
+            <p><img src="photography/astronaut.png" onclick="openFullImg(this.src)"> <br> Companion 2.0 ^_^</p>
+            <p><img src="photography/durham2.png" onclick="openFullImg(this.src)"> <br> End of the world </p>
+            <p><img src="photography/durham1.png" onclick="openFullImg(this.src)"> <br> Proof that wrong steps can also end beautifully</p>
+            <p><img src="photography/stepping_into_sandal.png" onclick="openFullImg(this.src)"> <br> Stepping into your sandals</p>
+            <p><img src="photography/white_flower2.png" onclick="openFullImg(this.src)"> <br> Ready to fly</p>
+            <p><img src="photography/white_flower1.png" onclick="openFullImg(this.src)"> <br> In a long distance relationship with the moon </p>
+            <p><img src="photography/kempenfelt1.png" onclick="openFullImg(this.src)"> <br> Discoveries </p>
+            <p><img src="photography/starry_night1.png" onclick="openFullImg(this.src)"> <br>Do you see a dog? </p>
+            <p><img src="photography/evening_sky1.png" onclick="openFullImg(this.src)"> <br>Blue skies</p>
+            <p><img src="photography/barrie_sky1.png" onclick="openFullImg(this.src)"> <br> Dracaris</p>
+            <p><img src="photography/backyard_rocket1.png" onclick="openFullImg(this.src)"> <br> Just some backyard sightings</p>
+            <p><img src="photography/wild_flower1.png" onclick="openFullImg(this.src)"> <br> As wild as it can get</p>
+            <p><img src="photography/blur2.png" onclick="openFullImg(this.src)"> <br> Blur more!</p>
+            <p><img src="photography/blur1.jpg" onclick="openFullImg(this.src)"> <br> Blur!</p>
+            <p><img src="photography/chilling_mookkan.png" onclick="openFullImg(this.src)"> <br> Companion ^_^</p>
+            <p><img src="photography/clouds_from_plane2.png" onclick="openFullImg(this.src)"> <br> Winged</p>
+            <p><img src="photography/clouds_from_plane1.png" onclick="openFullImg(this.src)"> <br>On cloud 9, 10, 11 & 12!</p>
+            <p><img src="photography/tvm_from_plane.png" onclick="openFullImg(this.src)"> <br> Trivandrum, my love! </p>
+            <p><img src="photography/himalayas.png" onclick="openFullImg(this.src)"> <br> The Himalayas </p>
+            <p><img src="photography/rainbow.png" onclick="openFullImg(this.src)"> <br> Caught red(-orange-yellow-green-blue-indigo-violet) handed!</p>
+            <p><img src="photography/transasia_view.png" onclick="openFullImg(this.src)"> <br>Reflections can be deceptive!</p>
+            <p><img src="photography/foggy_kakkanad.png" onclick="openFullImg(this.src)"> <br> Foggy mornings </p>
+            <p><img src="photography/coral_kakkanad_mrng_walk.png" onclick="openFullImg(this.src)"> <br> An intersection of nature and civilisation</p>
+            <p><img src="photography/night_kakkanad.png" onclick="openFullImg(this.src)"> <br> My karmabhoomi</p>
+            <p><img src="photography/indian_train_window3.png" onclick="openFullImg(this.src)"> <br> Indian railway's very own 40" TV</p>
+            <p><img src="photography/indian_train_window2.png" onclick="openFullImg(this.src)"> <br>Do parallels meet?</p>
+            <p><img src="photography/indian_train_window1.png" onclick="openFullImg(this.src)"> <br>Right across the lake</p>
+            <p><img src="photography/padmanabha_temple1.jpg" onclick="openFullImg(this.src)"> <br>Symmetry <br> Location: Sree Padmanabha Temple, Trivandrum, Kerala, India</p>
+
+
+        </div>
+        
+           
+        <button onclick="topFunction()" id="ScrollToTop" title="Go to top"><i class="fa-solid fa-up-long"></i></button> 
+        
+        <!--------- Footer -------->
+        <section class="footer">
+            <div class="icons">
+                <a href="https://www.linkedin.com/in/meenakshi-jk/" class="fa fa-brands fa-linkedin"></a>
+                <a href="https://github.com/Meenakshijk17" class="fa fa-brands fa-github"></a>
+                <a href="mailto:meenakshi.krishnakumar.mk@gmail.com" class="fa fa-solid fa-envelope"></a>
+                <a href="https://www.instagram.com/meenakshi_jk/" class="fa fa-brands fa-instagram"></a>
+            </div>
+            <p> Made using HTML, CSS & Github Pages </p>
+        </section>
+
+
+        <!--------- Script to Open and Close Full Images --->
+        <script>
+            var fullImgBox = document.getElementById("fullImgBox");
+            var fullImg = document.getElementById("fullImg");
+
+            function openFullImg(pic){
+                fullImgBox.style.display = "flex";
+                fullImg.src = pic;
+
+            }
+
+            function closeFullImg(){
+                fullImgBox.style.display = "none";
+            }
+
+        </script>
+      
+        <!--------- JavaScript to Toggle Side Menu ------->
+        
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            var menuBar = document.getElementById("menuBar");
+            function showMenu(){
+                navLinks.style.right = "0";
+                menuBar.style.opacity = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-150px";
+                menuBar.style.opacity = "100";
+            }
+        </script>
+
+
+        <!--------- JavaScript to Scroll back to top ------->
+        <script>
+            // Get the button:
+            let mybutton = document.getElementById("ScrollToTop");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+              } else {
+                mybutton.style.display = "none";
+              }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+            //   document.body.scrollTop = 0; // For Safari
+              document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            } 
+        </script>
+  
+
+    </body>
+</html>
