@@ -5,7 +5,7 @@ $subject = $_POST['subject'];
 $message = $_POST['message'];
 
 // Email for your website
-$email_from = "contact@";
+$email_from = "contact@meenakshijk17.github.io";
 $email_subject = "New Message";
 $email_body = "Visitor Name: $name.\n".
               "Visitor Email: $visitor_email.\n".
