@@ -523,7 +523,10 @@ ul.blog-modifications{
     flex-basis: 75%;
 }
 .blog-left img{
-    width: 75%;
+    width: 100%;
+}
+.blog-left iframe{
+    width: 100%;
 }
 .blog-left h1{
     text-align: left;
@@ -534,7 +537,7 @@ ul.blog-modifications{
 .blog-left p.indent{
     text-align: left;
     text-indent: 30px;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 400;
     /* font-style: italic; */
 }
@@ -546,6 +549,7 @@ ul.blog-modifications{
     color: black;
     padding: 7px 0;
     font-size: 12px;
+    margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 0;
     opacity: 0.8;
@@ -619,10 +623,10 @@ ul.blog-modifications{
         font-size: 25px;
     }
     .blog-left h3{
-        font-size: 15px;
+        font-size: 17px;
     }
     .blog-left p.indent{
-        font-size: 12px;
+        font-size: 15px;
     }
     .img_src{
         font-size: 6px;
