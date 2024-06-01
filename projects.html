@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title> KMeens </title>
+        <link rel="icon" type="image/png" href="images/logo-white-on-transparent.png"/>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1Q96QKHQXX"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-1Q96QKHQXX');
+        </script>
+</head>
+    <body>
+        <section class="sub-header">
+            <nav>
+                <a href="index.html"><img src="images/logo-white.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-regular fa-circle-xmark" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="blogs.html">BLOGS</a></li>
+                        <li><a href="projects.html">PROJECTS</a></li>
+                        <!-- <li><a href="">BOOKS</a></li> -->
+                        <li><a href="photography.html">PHOTOGRAPHY</a></li>
+                        <li><a href="contact.html">CONTACT ME</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()" id="menuBar"></i>
+            </nav>
+            <h1> Projects </h1>
+        </section>
+
+        
+		<section class="blogs"> 
+			<div class="blog-column">
+                <a href="https://github.com/Meenakshijk17/Index/blob/main/README.md">
+                <h3>Project Suite</h3>
+                <p> A list of my projects, categorised based on skills, just to make your life a bit easier! <i> Note. This link will take you to a page in my GitHub profile. </i>
+                </p>
+                </a>
+            </div> 
+		<section class="blogs"> 
+			<div class="blog-column">
+                <a href="projects/Food_Diary_Dashboard.html">
+                <p class="blog-pDate">Date published: 1st June, 2024</p>
+                <h3>LifeStyle Tracker</h3>
+                <p class="blog-tags">Power BI | Data Visualization | Data Storytelling</p>
+                <p> A comprehensive Power BI dashboard designed to track and analyze daily and periodic nutritional intake, water consumption, physical activity, and weight trends for optimized health and wellness management.
+                </p>
+                </a>
+            </div> 
+            <div class="blog-column">
+                <a href="projects/CRM_Sales_Analysis_Dashboard.html">
+                <p class="blog-pDate">Date published: 15th May, 2024</p>
+                <h3>CRM Sales Analysis: Unveiling the Sales Story</h3>
+                <p class="blog-tags">Power BI | Data Visualization | Data Storytelling</p>
+                <p> The CRM Sales Analysis Power BI dashboard offers a comprehensive, interactive view of sales performance across various dimensions, empowering stakeholders to make data-driven strategic decisions.
+                </p>
+                </a>
+            </div>         
+            
+            
+            
+
+        </section>
+        
+        <button onclick="topFunction()" id="ScrollToTop" title="Go to top"><i class="fa-solid fa-up-long"></i></button> 
+
+           <!--------- Footer -------->
+        <section class="footer">
+            <div class="icons">
+                <a href="https://www.linkedin.com/in/meenakshi-jk/" class="fa fa-brands fa-linkedin"></a>
+                <a href="https://github.com/Meenakshijk17" class="fa fa-brands fa-github"></a>
+                <a href="mailto:meenakshi.krishnakumar.mk@gmail.com" class="fa fa-solid fa-envelope"></a>
+                <a href="https://www.instagram.com/meenakshi_jk/" class="fa fa-brands fa-instagram"></a>
+            </div>
+            <p> Made using HTML, CSS & Github Pages </p>
+        </section>
+   
+   
+         
+           
+        <!--------- JavaScript to Toggle Side Menu ------->
+        
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            var menuBar = document.getElementById("menuBar");
+            function showMenu(){
+                navLinks.style.right = "0";
+                menuBar.style.opacity = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-150px";
+                menuBar.style.opacity = "100";
+            }
+        </script>
+
+
+        <!--------- JavaScript to Scroll back to top ------->
+        <script>
+            // Get the button:
+            let mybutton = document.getElementById("ScrollToTop");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+                } else {
+                mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+            //   document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            } 
+        </script>
+   
+
+    </body>
+</html>
