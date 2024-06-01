@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title> KMeens </title>
+        <link rel="icon" type="image/png" href="images/logo-white-on-transparent.png"/>
+        <link rel="stylesheet" href="../style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1Q96QKHQXX"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-1Q96QKHQXX');
+        </script>
+</head>
+    <body>
+        <section class="blog-header">
+            <nav>
+                <a href="../index.html"><img src="../images/logo-white.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-regular fa-circle-xmark" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="../index.html">HOME</a></li>
+                        <li><a href="../blogs.html">BLOGS</a></li>
+                        <li><a href="../projects.html">PROJECTS</a></li>
+                        <li><a href="../photography.html">PHOTOGRAPHY</a></li>
+                        <li><a href="../contact.html">CONTACT ME</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()" id="menuBar"></i>
+            </nav>
+        </section>
+        
+        
+
+        <!------------ Blog Content ------------->
+        <script src="../prism.js"></script>
+        
+        <section class="blog-content">
+            <div class="row">
+                <div class="blog-left">
+                    
+                    <h1> CRM Sales Analysis: Unveiling the Sales Story </h1>
+<!--                                       
+                    <img src="../images/img1.jpg"><br>
+                    <a class="img_src">link to image source or a footer to image </a> -->
+                    
+                    <p class="indent"> The CRM Sales Analysis Power BI dashboard is more than a collection of data visualizations; it's a narrative that can potentially guide users through the intricate landscape of sales performance. Each element of the dashboard is a chapter in the story of how the company is performing, providing insights that drive strategic decisions. Let's embark on this storytelling journey through the dashboard, revealing the insights hidden within the data.
+
+                    </p>
+					
+					<img src="assets/CRM_Sales_Analysis_Dashboard.png" width="900" height="300"><br>
+					
+					<h3> Chapter 1: The Key Metrics at a Glance </h3>
+                    
+                    <p class="indent"> Our story begins with the big picture. The total revenue, total target, variance, and margin are displayed prominently on data cards. These metrics serve as our compass, providing a quick snapshot of the company’s financial health. The data cards tell us where we stand right now—whether we’re on track, lagging, or exceeding expectations. 
+                    </p>
+					<p class="indent"> Insight: The total revenue indicates robust sales, but the variance card reveals a gap between actual performance and targets. The margin card further highlights profitability concerns, setting the stage for deeper investigation.
+                    </p>
+					
+                    <h3> Chapter 2: Customizing the View </h3>
+                    
+					<p class="indent"> As we delve deeper, the filter/slicer for country, business group, and year-month becomes our magnifying glass. This tool allows us to focus on specific areas, adjusting our view to see different facets of the sales landscape. 
+                    </p>
+					<p class="indent"> Insight: Filtering by the latest quarter shows that Poland is outperforming other regions. This customization helps pinpoint where to focus our attention next.
+                    </p>
+					
+					<h3> Chapter 3: Unfolding the Sales Trends</h3>
+					<p class="indent"> Next, we explore the sales trend line chart across various quarters. This chart is like flipping through the pages of a calendar, showing how sales have ebbed and flowed over time.
+                    </p>
+					<p class="indent"> Insight: The trend line reveals a peak in Q4, but an unexpected dip in Q3. This anomaly prompts further questions: Was there a market disruption? Did a major client delay their purchase?
+                    </p>
+					
+					
+                    <h3> Chapter 4: Decoding Pricing Strategies </h3>
+					<p class="indent"> The clustered bar chart showcasing pricing level variance for new, recurring, and renewal sales introduces us to the nuances of our pricing strategies. This is where we understand the impact of our pricing decisions on different types of sales.
+                    </p>
+					<p class="indent"> Insight: The chart reveals that renewal sales have double the variance of new sales, and new sales have triple the variance of recurring sales. This indicates significant instability in our renewal pricing strategy, prompting a need to investigate and stabilize renewal pricing, while also addressing the volatility in new sales pricing.
+                    </p>
+					
+					
+                    <h3> Chapter 5: Evaluating Business Group Performance </h3>
+					<p class="indent"> The clustered column chart comparing revenue versus targets across business groups is our scorecard for each segment of the business. It helps us identify which groups are the star performers and which need improvement.
+                    </p>
+					<p class="indent"> Insight: The chart reveals that most business groups have achieved or surpassed their targets, showcasing strong overall performance.
+                    </p>
+					
+					
+                    <h3> Chapter 6: Mapping Regional Variances </h3>
+					<p class="indent"> The waterfall chart showing variance across countries provides a geographical perspective. It breaks down the overall performance, highlighting contributions from each country.
+                    </p>
+					<p class="indent"> Insight: The chart reveals that while Hungary has contributed significantly to positive variance, several smaller markets, such as those in Estonia, have underperformed. This insight suggests opportunities for market-specific strategies and localized support.
+                    </p>
+					
+					<h3> Chapter 7: Visualizing Sales Distribution </h3>
+					<p class="indent"> Finally, the treemap offers a visual representation of sales distribution across countries. This is our map of the sales territory, showing which regions dominate and which are minor players.
+                    </p>
+					<p class="indent"> Insight: The treemap shows that the Poland has a substantial share of sales, but many smaller European countries collectively hold a significant portion as well. This highlights the importance of a diverse market approach and the potential of untapped regions.
+                    </p>
+					
+					<h2> Conclusion: Crafting the Strategy </h2>
+					<p class="indent"> As we conclude our story, the dashboard has guided us through the highs and lows, uncovering insights and raising critical questions. The data cards provided the headline numbers, the filters and slicers allowed for tailored views, and each chart added depth and detail to our understanding.
+                    </p>
+					<p class="indent"> The narrative reveals areas of strength and opportunities for growth, setting the stage for strategic decisions. By following this story, stakeholders can make informed choices to steer the company towards greater success, optimizing strategies, and focusing efforts where they are needed most.                   </p>
+					<p class="indent"> Thus, the CRM Sales Analysis dashboard is not just a tool for data presentation, but a storyteller, illuminating the path forward with clarity and insight.
+                    </p>
+
+                    <br>
+                    <p class="blog-Date"> Relevant links: </p>
+                    <p class="blog-Date"> <a href="https://github.com/Meenakshijk17/CRM-Sales-Analysis-PowerBI/blob/main/README.md">GitHub Repo - CRM Sales Analysis Dashboard</a></p>
+                  
+                    
+                    
+                      
+                    <br>
+                    <p class="blog-Date">Date published: 15th May, 2024</p>
+                    <p class="blog-Date">Date modified: 15th May, 2024
+                        <!-- <br> <ul class="blog-modifications">
+                            <li> Changed this </li>
+                            <li> Changed that </li>
+                        </ul> -->
+                    </p>
+                
+                </div>   
+
+                <div class="blog-right">
+                    <h3> Tags </h3>
+                    <p> Power BI </p><br>
+                    <p> Data Visualization</p><br>
+					<p> Data Storytelling</p><br>
+                    
+                </div>
+            </div>
+            
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+        <!-- <a target="_blank" href="https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/weather/autumn/autumn-leaves-against-a-blue-sky-photo-andrew-small.jpg">
+            <img src="https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/weather/autumn/autumn-leaves-against-a-blue-sky-photo-andrew-small.jpg" alt="Autumn" width="200">
+           </a> -->
+
+
+
+
+
+
+
+
+       <button onclick="topFunction()" id="ScrollToTop" title="Go to top"><i class="fa-solid fa-up-long"></i></button> 
+       
+       <!--------- Footer -------->
+        <section class="footer">
+            <div class="icons">
+                <a href="https://www.linkedin.com/in/meenakshi-jk/" class="fa fa-brands fa-linkedin"></a>
+                <a href="https://github.com/Meenakshijk17" class="fa fa-brands fa-github"></a>
+                <a href="mailto:meenakshi.krishnakumar.mk@gmail.com" class="fa fa-solid fa-envelope"></a>
+                <a href="https://www.instagram.com/meenakshi_jk/" class="fa fa-brands fa-instagram"></a>
+            </div>
+            <p> Made using HTML, CSS & Github Pages </p>
+        </section>
+   
+   
+   
+           
+        <!--------- JavaScript to Toggle Side Menu ------->
+        
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            var menuBar = document.getElementById("menuBar");
+            function showMenu(){
+                navLinks.style.right = "0";
+                menuBar.style.opacity = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-150px";
+                menuBar.style.opacity = "100";
+            }
+        </script>
+
+
+        <!--------- JavaScript to Scroll back to top ------->
+        <script>
+            // Get the button:
+            let mybutton = document.getElementById("ScrollToTop");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+              } else {
+                mybutton.style.display = "none";
+              }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+            //   document.body.scrollTop = 0; // For Safari
+              document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            } 
+        </script>
+
+
+    
+
+    </body>
+</html>
