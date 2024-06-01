@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title> KMeens </title>
+        <link rel="icon" type="image/png" href="images/logo-white-on-transparent.png"/>
+        <link rel="stylesheet" href="../style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1Q96QKHQXX"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-1Q96QKHQXX');
+        </script>
+</head>
+    <body>
+        <section class="blog-header">
+            <nav>
+                <a href="../index.html"><img src="../images/logo-white.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-regular fa-circle-xmark" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="../index.html">HOME</a></li>
+                        <li><a href="../blogs.html">BLOGS</a></li>
+                        <li><a href="../projects.html">PROJECTS</a></li>
+                        <li><a href="../photography.html">PHOTOGRAPHY</a></li>
+                        <li><a href="../contact.html">CONTACT ME</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()" id="menuBar"></i>
+            </nav>
+        </section>
+        
+        
+
+        <!------------ Blog Content ------------->
+        <script src="../prism.js"></script>
+        
+        <section class="blog-content">
+            <div class="row">
+                <div class="blog-left">
+                    
+                    <h1> Thinking Outside the Syntax </h1>
+<!--                                       
+                    <img src="../images/img1.jpg"><br>
+                    <a class="img_src">link to image source or a footer to image </a> -->
+                    
+                    <p class="indent"> Most of us learnt the foundations of computer programming the hard way - studying textbooks, attending old-school classrooms where we wrote programming exams on paper, and relying on YouTube videos. A few of us also learned programming through online courses. They all typically follow a similar approach of initially explaining the theory and syntax before engaging hands-on. However, universities like Stanford and Harvard employ visual platforms and intuitive drag-and-drop interfaces to teach the programming fundamentals.
+
+                    </p>
+                    
+                    <p class="indent"> I recently had the chance to volunteer as a programming instructor for a group of students with diverse programming backgrounds. The course I taught was a Stanford University initiative, called Code in Place, that focused on teaching the fundamentals of Python programming. Specifically, we covered the initial portion of their renowned CS106A - Programming Methodologies course. The curriculum began by introducing a visual platform named Karel. Essentially, it is a grid-based canvas where Karel, the robot, can navigate, and place and pick up objects. Karel can be controlled using functions which are already defined in the platform.
+ 
+                    </p>
+                    <p class="indent"> To be honest, upon learning about this unconventional (compared to what I have experienced so far) approach, I was skeptical. I had doubts about how utilizing a no/low-code platform could effectively facilitate the learning of programming concepts. However, as the program progressed, I came to realize that these platforms actually assist students in developing a solid grasp of programming fundamentals without delving into the complexities of syntax and statements. Visual aids provided by such platforms make it easier and more intuitive to teach concepts like looping, especially when accompanied by a well-designed curriculum.
+
+                    </p>
+                    <p class="indent"> Below is a basic project I created using Karel aimed at creating an outline for the canvas by placing beepers (blue rotated squares) along the walls. This task serves as a useful tool for understanding the concept of loops in Python.
+
+                    </p>
+                    <br>
+                    <img src="./images/Karel_gif.gif" alt="GIF image of Karel"/>
+                    <p class="indent"> As you can observe, the code on the left is concise and does not include the specific details of the context. Codes to move, to place beeper and to turn left are already defined for you. All you need to do is make the appropriate function calls. This approach allows students to concentrate on the core topic at hand, which in this case is loops. Additionally, as the Karel performs an action, the line of code corresponding to it is also highlighted, which helps the student identify the flow of control.
+
+                    </p>
+                    <p class="indent">Scratch, developed by MIT, is another platform that anyone with zero programming knowledge can take advantage of. It is more advanced than Karel in terms of customisability and the potential to develop advanced projects, at the same time being a completely no-code platform. While built-in code snippets can be used by function calls in Karel, Scratch lets you to simply drag and drop the functions, like pieces of a puzzle. 
+ 
+                    </p>
+                    <p class="indent"> As an example, I recently tried recreating the iconic egg catching computer game on Scratch. Click the green flag below to start the game. Use left and right arrow keys on the keyboard to move the basket, catch the eggs and avoid the poop. 
+                        You can see the details and the 'code' <a href="https://scratch.mit.edu/projects/866415870">here</a>. It was built as part of a submission to Harvard’s CS50 course. 
+
+                    </p>
+                    <br>
+                    <iframe src="https://scratch.mit.edu/projects/866415870/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                    <p class="indent"> Programming has become an almost indispensable skill, and while learning it through traditional means is not incorrect, it can be more challenging. 
+                        As we need to work smarter rather than harder inorder to catch up with the fast-paced field of research and technology, platforms such as Karel and Scratch can prove to be immensely valuable to speed up our learning process.
+
+                    </p>
+
+                    <br>
+                    <p class="blog-Date"> Relevant links: </p>
+                    <p class="blog-Date"> <a href="https://compedu.stanford.edu/karel-reader/docs/python/en/chapter1.html">Stanford's Karel</a></p>
+                    <p class="blog-Date"> <a href="https://scratch.mit.edu/">MIT's Scratch</a></p>
+                    <p class="blog-Date"> <a href="https://codeinplace.stanford.edu/">Stanford's Code in Place</a></p>
+                    <p class="blog-Date"> <a href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x?utm_source=google&utm_campaign=19315581336&utm_medium=cpc&utm_term=harvard%20cs50&hsa_acc=7245054034&hsa_cam=19315581336&hsa_grp=144242542723&hsa_ad=642052609431&hsa_src=g&hsa_tgt=kwd-334019831226&hsa_kw=harvard%20cs50&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQjw1rqkBhCTARIsAAHz7K2Na2zv79qLNmfCtxHeQcFHryzK5Lrlr_39l589DwAPJV8GPR-kDa8aAjvkEALw_wcB">CS50's Introduction to Computer Science from Harvard via edX</a></p>
+
+                        <!-- <ul>
+                            <li>Karel</p></li>
+                            <li>Scratch</li>
+                            <li>Stanford's Code in Place</li>
+                            <li>Harvard's CS50 via edX</li>
+                        </ul>  -->
+                        <!-- <a href="https://hbr.org/podcast/2023/06/how-to-manage-being-taken-seriously">
+                        How to Manage: Being Taken Seriously</a> on HBR's Women at Work.
+                    </p> -->
+                    
+                    
+                      
+                    <br>
+                    <p class="blog-Date">Date published: 17th June, 2023</p>
+                    <p class="blog-Date">Date modified: 17th June, 2023
+                        <!-- <br> <ul class="blog-modifications">
+                            <li> Changed this </li>
+                            <li> Changed that </li>
+                        </ul> -->
+                    </p>
+
+
+                                  
+                
+                
+                
+                </div>
+
+                
+
+
+
+
+
+
+                <div class="blog-right">
+                    <h3> Tags </h3>
+                    <p> programming </p><br>
+                    <p> Python</p><br>
+                    
+                </div>
+            </div>
+            
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+        <!-- <a target="_blank" href="https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/weather/autumn/autumn-leaves-against-a-blue-sky-photo-andrew-small.jpg">
+            <img src="https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/weather/autumn/autumn-leaves-against-a-blue-sky-photo-andrew-small.jpg" alt="Autumn" width="200">
+           </a> -->
+
+
+
+
+
+
+
+
+       <button onclick="topFunction()" id="ScrollToTop" title="Go to top"><i class="fa-solid fa-up-long"></i></button> 
+       
+       <!--------- Footer -------->
+        <section class="footer">
+            <div class="icons">
+                <a href="https://www.linkedin.com/in/meenakshi-jk/" class="fa fa-brands fa-linkedin"></a>
+                <a href="https://github.com/Meenakshijk17" class="fa fa-brands fa-github"></a>
+                <a href="mailto:meenakshi.krishnakumar.mk@gmail.com" class="fa fa-solid fa-envelope"></a>
+                <a href="https://www.instagram.com/meenakshi_jk/" class="fa fa-brands fa-instagram"></a>
+            </div>
+            <p> Made using HTML, CSS & Github Pages </p>
+        </section>
+   
+   
+   
+           
+        <!--------- JavaScript to Toggle Side Menu ------->
+        
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            var menuBar = document.getElementById("menuBar");
+            function showMenu(){
+                navLinks.style.right = "0";
+                menuBar.style.opacity = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-150px";
+                menuBar.style.opacity = "100";
+            }
+        </script>
+
+
+        <!--------- JavaScript to Scroll back to top ------->
+        <script>
+            // Get the button:
+            let mybutton = document.getElementById("ScrollToTop");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+              } else {
+                mybutton.style.display = "none";
+              }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+            //   document.body.scrollTop = 0; // For Safari
+              document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            } 
+        </script>
+
+
+    
+
+    </body>
+</html>

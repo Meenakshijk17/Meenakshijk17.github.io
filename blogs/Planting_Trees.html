@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title> KMeens </title>
+        <link rel="icon" type="image/png" href="images/logo-white-on-transparent.png"/>
+        <link rel="stylesheet" href="../style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1Q96QKHQXX"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-1Q96QKHQXX');
+        </script>
+</head>
+    <body>
+        <section class="blog-header">
+            <nav>
+                <a href="../index.html"><img src="../images/logo-white.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-regular fa-circle-xmark" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="../index.html">HOME</a></li>
+                        <li><a href="../blogs.html">BLOGS</a></li>
+                        <li><a href="../projects.html">PROJECTS</a></li>
+                        <li><a href="../photography.html">PHOTOGRAPHY</a></li>
+                        <li><a href="../contact.html">CONTACT ME</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()" id="menuBar"></i>
+            </nav>
+        </section>
+        
+        
+
+        <!------------ Blog Content ------------->
+        <script src="../prism.js"></script>
+        
+        <section class="blog-content">
+            <div class="row">
+                <div class="blog-left">
+                    
+                    <h1> Planting Trees </h1>
+					
+					<h4> Understanding Decision Trees through <i>Scikit-learn</i>’s Methods  </h4>
+                                       
+                    <img src="images/planting_trees.jpg"><br>
+                    <a class="img_src">Image taken from http://www.clipartbest.com/clipart-KinXggxkT </a>
+                    
+					
+                    <p class="indent"> Decision trees are one of the simplest and most intuitive algorithms among all the machine learning algorithms. They can be used for both classification and regression problems. Despite being simple, they are extremely useful and have many advantages over many other popular algorithms like linear/logistic regression and SVMs. It is non-parametric and supervised and the built model is in the form of a tree (surprise surprise!), consisting of nodes, namely, the root, the leaves and the intermediate nodes, and branches (or edges) connecting these nodes. 
+
+                    </p>
+                    
+                    <p class="indent"> The following are some of the advantages of using decision trees. <br>
+					&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  
+						- Highly inexpensive in terms of computational power <br>
+					&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+						- Easy to interpret if the built tree is relatively small <br>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+						- Fast in both training and prediction<br>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+						- Can handle any type of data, any relationship between the input variables and any relationship between the input and output variables<br>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+						- Missing values need not be handled prior to feeding the data to a decision tree<br>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+						- Quite robust to outliers in the input space<br>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+						- Scaling of data not required while feeding the data to this algorithm<br>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  
+						- Quite robust to outliers in the input space<br>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+						- Irrelevant features, even though they add to the computational time, does not really affect the output of a decision tree<br>
+ 
+                    </p>
+					
+                    <p class="indent"> <i>Scikit-learn</i>, one of the most popular libraries used for machine learning, contains methods to build decision tree classifiers as well as regressors. The goal of this write-up is to understand the concepts of decision trees as we walk through the arguments of these methods. The definitions of the decision tree classes in <i>scikit-learn</i> are as follows:
+                    </p>
+					<br>
+					<script src="https://gist.github.com/Meenakshijk17/692f80733aafce2167316cdf52e89041.js"></script>
+					<script src="https://gist.github.com/Meenakshijk17/588e7ed457a8af142b0b4b9294e882ce.js"></script>
+					
+                    <p class="indent"> It can be noted that the arguments of both these classes are the same, while the parameters could vary based on the type of the decision tree. 
+                    </p>
+                    <p class="indent"> Now, let’s understand how a decision tree is built. As mentioned earlier, a decision tree consists of a root node, intermediary nodes, and leaf nodes. The data flow starts from the root node, passes through the intermediaries, and ends at leaf nodes, or leaves. Each node, except the leaf nodes, are split into two or more child nodes based on a criterion generated from any of the input features.  
+                    </p>
+                    <p class="indent"> The foremost step in building a decision tree is to identify the criterion at the root node. This is done based on the quality of the split made by each feature criteria, i.e., how well each of the criterion splits the target space. This can be quantified using various metrics like Gini impurity and entropy in case of classification, and squared error in case of regression. This choice of metric can be made through the criterion argument in the scikit-learn’s function definition. The function supports two strategies to make this search – “best” and “random”, which can be passed through the argument splitter. The “best” splitter goes over each of the features and comes up with the feature criterion that gives the best split based on the criterion. This has a computational overhead of going through all the features before choosing the best split criterion. The “random” splitter uses only a subset of the features (chosen randomly based on the value of <b><i>max_features</b></i>) to determine the best criterion.  
+                    </p>
+                    <p class="indent"> Once the criterion at the root node is chosen, the split is made, and the tree grows to a depth of one. The algorithm then repeats the same process of criterion identification for each of the child nodes and hence the tree grows its branches.  
+                    </p>
+                    <p class="indent"> The prediction of the target value of a node can be made by using a majority vote or probability in case of classification, and by taking the average in case of regression of the targets of the data points in that node. 
+                    </p>
+                    <p class="indent"> If unchecked, a node would not split only if all the data points in it belong to the same target class. Hence decision trees are highly prone to overfitting, i.e., they might not generalize well to unseen data.  
+                    </p>
+                    <p class="indent"> There are methods designed to overcome this major drawback. For instance, one can decide to not let the tree go beyond a <b><i>max_depth</b></i> or specify the <b><i>min_samples_split</b></i> parameter that prevents the tree from making any more splits, if the split is to be made on a node with fewer than the specified number of data points. Similarly, one can use the <b><i>min_samples_leaf</b></i> or the <b><i>min_weight_fraction_leaf</b></i> to prevent the tree from having leaves with fewer than the given number of data points or a given weighted fraction of total input weights, respectively. The <b><i>max_features</b></i> argument, in addition to being used for criterion candidate selection, can also be used as a method to prevent overfitting. The <b><i>min_impurity_decrease</b></i> argument regulates the growth of the tree by stopping the split of a node if the split induces a decrease in the impurity less than the specified value. The <b><i>max_leaf_nodes</b></i> parameter lets a tree grow with only up to a given number of leaf nodes, in best-first fashion, i.e., the using the top impurity reducing nodes. 
+                    </p>
+                    <p class="indent"> Additionally, (tree) pruning is a method that reduces the tree’s size by removing the nodes or rules that are relatively weak and less effective in predicting the target. This can be done both while and after building the tree. <b><i>ccp_alpha</b></i> is the complexity parameter used to manage the pruning. 
+                    </p>
+                    <p class="indent"> Even after trying out all these methods, decision trees may still overfit and fail to generalize well on unseen data. They are notorious at having high variance to new data points. A powerful method that imbibes all the good features of decision trees and additionally, generalize better, is the method of having an ensemble of trees, i.e., a forest. 
+                    </p>
+                    <p class="indent"> Even though ensembling can be done on most of the algorithms, decision trees are best suited for this as they are computationally inexpensive and have high variance, which are the major determinants of the efficiency of ensembles.
+                    </p>
+                    <p class="indent"> There are many powerful algorithms based on decision tree ensembles which have wide variety of use cases. Hence understanding the building blocks of these ensembles – the decision trees, is crucial. It is like planting actual trees to get the enormous benefits of forests in the future. 
+                    </p>
+
+                    <br>
+                    <p class="blog-Date"> Relevant links: </p>
+                    <p class="blog-Date"> <a href="https://scikit-learn.org/stable/modules/tree.html">Scikit-Learn's Documentation on Trees</a></p>
+                    <p class="blog-Date"> <a href="https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor">Scikit-Learn's Documentation on Decision Tree Regressors</a></p>
+                    <p class="blog-Date"> <a href="https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html">Scikit-Learn's Documentation on Decision Tree Classifiers</a></p>  
+					<p class="blog-Date"> <a href="https://github.com/Meenakshijk17/From_Scratch_Part_1-Decision-Trees-and-Random-Forests">An implementation of decision trees from scratch</a></p>   					
+                    
+                      
+                    <br>
+                    <p class="blog-Date">Date published: 21st April, 2024</p>
+                    <p class="blog-Date">Date modified: 21st April, 2024
+                        <!-- <br> <ul class="blog-modifications">
+                            <li> Changed this </li>
+                            <li> Changed that </li>
+                        </ul> -->
+                    </p>
+
+
+                                  
+                
+                
+                
+                </div>
+
+                
+
+
+
+
+
+
+                <div class="blog-right">
+                    <h3> Tags </h3>
+                    <p> Machine Learning </p><br>
+                    <p> Decision Trees</p><br>
+                    <p> Random Forests</p><br>
+                    <p> Classification</p><br>
+                    <p> Regression</p><br>
+                    <p> Scikit-Learn</p><br>
+                    <p> Python</p><br>
+                    
+                </div>
+            </div>
+            
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+        <!-- <a target="_blank" href="https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/weather/autumn/autumn-leaves-against-a-blue-sky-photo-andrew-small.jpg">
+            <img src="https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/weather/autumn/autumn-leaves-against-a-blue-sky-photo-andrew-small.jpg" alt="Autumn" width="200">
+           </a> -->
+
+
+
+
+
+
+
+
+       <button onclick="topFunction()" id="ScrollToTop" title="Go to top"><i class="fa-solid fa-up-long"></i></button> 
+       
+       <!--------- Footer -------->
+        <section class="footer">
+            <div class="icons">
+                <a href="https://www.linkedin.com/in/meenakshi-jk/" class="fa fa-brands fa-linkedin"></a>
+                <a href="https://github.com/Meenakshijk17" class="fa fa-brands fa-github"></a>
+                <a href="mailto:meenakshi.krishnakumar.mk@gmail.com" class="fa fa-solid fa-envelope"></a>
+                <a href="https://www.instagram.com/meenakshi_jk/" class="fa fa-brands fa-instagram"></a>
+            </div>
+            <p> Made using HTML, CSS & Github Pages </p>
+        </section>
+   
+   
+   
+           
+        <!--------- JavaScript to Toggle Side Menu ------->
+        
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            var menuBar = document.getElementById("menuBar");
+            function showMenu(){
+                navLinks.style.right = "0";
+                menuBar.style.opacity = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-150px";
+                menuBar.style.opacity = "100";
+            }
+        </script>
+
+
+        <!--------- JavaScript to Scroll back to top ------->
+        <script>
+            // Get the button:
+            let mybutton = document.getElementById("ScrollToTop");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+              } else {
+                mybutton.style.display = "none";
+              }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+            //   document.body.scrollTop = 0; // For Safari
+              document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            } 
+        </script>
+
+
+    
+
+    </body>
+</html>
